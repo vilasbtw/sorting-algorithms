@@ -21,13 +21,12 @@ public class Analyzer {
     }
 
     public void selectionSort() {
-        for (int current = 0; current < persons.length; current++) {
+        for (int current = 0; current < persons.length - 1; current++) {
             int indexOfTheLowestValue = getIndexOfTheLowestValue(current, persons.length - 1);
             Person currentPerson = persons[current];
             Person personWithTheLowestSalary = persons[indexOfTheLowestValue];
             persons[current] = personWithTheLowestSalary;
             persons[indexOfTheLowestValue] = currentPerson;
         }
-
     }
 }
