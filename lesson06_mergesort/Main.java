@@ -18,7 +18,7 @@ public class Main {
 
         Analyzer analyzer = new Analyzer(students);
 
-        Student[] allStudents = analyzer.merge(0, 4, students.length);
+        Student[] allStudents = analyzer.merge(1, 4, students.length);
         System.out.println("Merging: ");
         for (Student s : allStudents) {
             System.out.println(s.getName() + " grade: " + s.getGrade());

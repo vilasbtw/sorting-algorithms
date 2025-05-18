@@ -9,7 +9,7 @@ public class Analyzer {
     }
 
     public Student[] merge(int beggining, int middle, int end) {
-        Student[] allStudents = new Student[students.length];
+        Student[] allStudents = new Student[end - beggining];
         
         int allStudentsCurrentIndex = 0;
         int firstGroupCurrentIndex = beggining;
@@ -44,7 +44,11 @@ public class Analyzer {
             allStudentsCurrentIndex++;
         }
 
-        return allStudents;
+        for (int i = 0; i < allStudentsCurrentIndex; i++) {
+            students[beggining + i] = allStudents[i];
+        }
+
+        return students;
     }
 
 }
