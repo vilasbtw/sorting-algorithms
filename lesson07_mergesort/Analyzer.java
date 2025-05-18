@@ -1,4 +1,4 @@
-package lesson06_mergesort;
+package lesson07_mergesort;
 
 public class Analyzer {
 
@@ -8,9 +8,20 @@ public class Analyzer {
         this.students = students;
     }
 
-    public Student[] merge(int beggining, int middle, int end) {
-        Student[] allStudents = new Student[end - beggining];
+    public void mergesort(int beggining, int end) {
+        int quantity = end - beggining;
         
+        if (quantity > 1) {
+            int middle = (beggining + end) / 2;
+            mergesort(beggining, middle);
+            mergesort(middle, end);
+            merge(beggining, middle, end);
+        }
+    }
+
+    public void merge(int beggining, int middle, int end) {
+        Student[] allStudents = new Student[end - beggining];
+
         int allStudentsCurrentIndex = 0;
         int firstGroupCurrentIndex = beggining;
         int secondGroupCurrentIndex = middle;
@@ -46,8 +57,6 @@ public class Analyzer {
         for (int i = 0; i < allStudentsCurrentIndex; i++) {
             students[beggining + i] = allStudents[i];
         }
-
-        return students;
     }
 
 }
