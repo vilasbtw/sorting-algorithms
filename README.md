@@ -4,21 +4,11 @@ This project contains implementations of fundamental sorting algorithms written 
 ## 🚀 Implemented Algorithms:  
 
 - **Selection Sort:** a simple algorithm that repeatedly selects the smallest element and moves it to the correct position.
-Time complexity:   
-  - Worst Case: O(n²)  
 
 - **Insertion Sort:** efficient for nearly sorted datasets. Shifts elements to insert the current value at the correct position.
-Time complexity:  
-  - Worst Case: O(n²)  
 
 - **Bubble Sort:** Compares and swaps adjacent elements. Generally the least efficient sorting algorithm.
-Time complexity:  
-  - Worst Case: O(n²)
 
 - **Merge Sort:** A stable, divide-and-conquer algorithm that recursively splits and merges arrays.
-Time complexity:  
-  - Worst Case: O(n log n)
 
 - **Quick Sort:** Fast and efficient algorithm in most cases. Uses a pivot to partition the array and sort recursively.
-Time complexity:  
-  - Worst Case: O(n²)
